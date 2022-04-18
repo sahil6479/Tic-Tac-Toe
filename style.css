@@ -1,0 +1,147 @@
+:root{
+    --content: "X";
+}
+
+body{
+    background: lightgrey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+}
+h1{
+    text-align: center;
+}
+.player-header{
+    height: max-content;
+    width: max-content;
+    display: flex;
+    gap: 30px;
+    border-radius: 15px;
+    border: 1.5px solid #333333;
+    margin: 50px auto;
+    padding: 0px 15px;
+}
+.message-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+button{
+    font-size: 25px;
+    background: lightgrey;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin: 0px auto;
+}
+button:hover{
+    background: #989898;
+}
+#start-btn{
+    display: none;
+}
+.box{
+    display: grid;
+    width: 300px;
+    height: 300px;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    padding: 0px;
+    margin: 30px auto 0px;
+}
+.box div{
+    height: 100%;
+    width: 100%;
+    border: 1.5px solid #333;
+    font-weight: lighter;
+    font-size: 75px;
+    text-align: center;
+}
+div.box div.x:hover::after{
+    content: var(--content);
+    color: #989898;
+}
+
+
+.box div:nth-child(1),.box div:nth-child(2),.box div:nth-child(3){
+    border-top-width: 0px;
+}
+.box div:nth-child(1),.box div:nth-child(4),.box div:nth-child(7){
+    border-left-width: 0px;
+}
+.box div:nth-child(7),.box div:nth-child(8),.box div:nth-child(9){
+    border-bottom-width: 0px;
+}
+.box div:nth-child(3),.box div:nth-child(6),.box div:nth-child(9){
+    border-right-width: 0px;
+}
+.player-header h1{
+    padding: 15px;
+    border-radius: 15px;
+}
+#ph-1{
+    background-color: #333;
+    color: #fff;
+}
+#ph-2{
+    background-color: #333;
+    color: #fff;
+}
+hr{
+    border: 10px solid #333;
+    border-width: 3px 0px 0px 0px;
+    position: relative;
+    width: 0px;
+}
+#hr-1-3{
+    width: 275px;
+    transform: rotate(0deg);
+    top: 80px;
+}
+#hr-4-6{
+    width: 275px;
+    transform: rotate(0deg);
+    top: 180px;
+}
+#hr-7-9{
+    width: 275px;
+    transform: rotate(0deg);
+    top: 280px;
+}
+#hr-1-7{
+    width: 275px;
+    transform: rotate(90deg);
+    top: 180px;
+    left: -100px;
+}
+#hr-2-8{
+    width: 275px;
+    transform: rotate(90deg);
+    top: 180px;
+    left: 0px;
+}
+#hr-3-9{
+    width: 275px;
+    transform: rotate(90deg);
+    top: 180px;
+    left: 100px;
+}
+#hr-1-9{
+    width: 375px;
+    transform: rotate(45deg);
+    top: 180px;
+}
+#hr-3-7{
+    width: 375px;
+    transform: rotate(135deg);
+    top: 180px;
+}
+
+
+@media(max-width: 800px) {
+    .player-header{
+        margin: 5px auto;
+    }
+    .player-header h1{
+        font-size: 30px;
+        padding: 5px;
+    }
+}
