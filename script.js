@@ -187,4 +187,5 @@ function startNew(){
     document.querySelector(".ph-1").id = "ph-1";
     document.querySelector(".ph-2").removeAttribute("id");
     numGen();
+    messageEl.innerText = "";
 }
