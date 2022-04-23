@@ -140,6 +140,7 @@ hr{
     .player-header{
         margin: 5px auto;
         gap: 10px;
+        margin-top: 55px;
     }
     .player-header h1{
         font-size: 20px;
